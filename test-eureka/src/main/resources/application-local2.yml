@@ -121,9 +121,9 @@ sharding:
       orchestration:
         name: demo_yaml_ds_sharding_ms
         type: sharding
-        overwrite: true
+        overwrite: false
         zookeeper:
           namespace: orchestration-yaml-demo
           server-lists: localhost:2181
 server:
-  port: 7211     
+  port: 7212     

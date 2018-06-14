@@ -45,7 +45,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -57,41 +56,53 @@
 			<version>${mybatis-spring.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.shardingsphere</groupId>
-			<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-			<version>${sharding-sphere.version}</version>
-		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>io.shardingsphere</groupId> -->
-<!-- 			<artifactId>sharding-jdbc</artifactId> -->
-<!-- 			<version>${sharding-sphere.version}</version> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>io.shardingsphere</groupId> -->
-<!-- 			<artifactId>sharding-jdbc-orchestration</artifactId> -->
-<!-- 			<version>${sharding-sphere.version}</version> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>io.shardingsphere</groupId> -->
-<!-- 			<artifactId>sharding-core</artifactId> -->
-<!-- 			<version>${sharding-sphere.version}</version> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>io.shardingsphere</groupId> -->
-<!-- 			<artifactId>sharding-proxy</artifactId> -->
-<!-- 			<version>${sharding-sphere.version}</version> -->
-<!-- 		</dependency> -->
-		<dependency>
 			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP-java7</artifactId>
-			<version>${hikari-cp.version}</version>
+			<artifactId>HikariCP</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>com.zaxxer</groupId> -->
-		<!-- <artifactId>HikariCP</artifactId> -->
-		<!-- <version>${hikaricp.version}</version> -->
-		<!-- </dependency> -->
-
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 	</dependencies>
+
+
+	<profiles>
+		<profile>
+			<id>cloud</id>
+			<properties>
+				<profileActive>cloud</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>local</id>
+			<properties>
+				<profileActive>local</profileActive>
+			</properties>
+<!-- 			<activation> -->
+<!-- 				<activeByDefault>true</activeByDefault> -->
+<!-- 			</activation> -->
+		</profile>
+		<profile>
+			<id>local2</id>
+			<properties>
+				<profileActive>local2</profileActive>
+			</properties>
+<!-- 			<activation> -->
+<!-- 				<activeByDefault>true</activeByDefault> -->
+<!-- 			</activation> -->
+		</profile>
+		<profile>
+			<id>local3</id>
+			<properties>
+				<profileActive>local3</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
 
 </project>

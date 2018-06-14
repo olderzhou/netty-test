@@ -2,9 +2,8 @@ spring:
   application:
     name: HelloClient
   profiles:
-    active: local
-server:
-  port: 7211
+    active: @profileActive@    
+
   
 mybatis:
   config-location: classpath:META-INF/mybatis-config.xml
