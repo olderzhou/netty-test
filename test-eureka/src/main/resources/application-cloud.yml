@@ -1,0 +1,11 @@
+sharding:
+  jdbc:
+    config:
+      orchestration:
+        name: demo_yaml_ds_sharding_ms
+        overwrite: false
+        type: masterslave
+        zookeeper:
+          namespace: orchestration-yaml-demo
+          server-lists: localhost:2181
+     
