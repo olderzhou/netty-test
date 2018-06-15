@@ -99,9 +99,9 @@
 			<properties>
 				<profileActive>local3</profileActive>
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
+<!-- 			<activation> -->
+<!-- 				<activeByDefault>true</activeByDefault> -->
+<!-- 			</activation> -->
 		</profile>
 	</profiles>
 
