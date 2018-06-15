@@ -4,7 +4,7 @@ sharding:
       orchestration:
         name: demo_yaml_ds_sharding_ms
         overwrite: false
-        type: masterslave
+        type: sharding
         zookeeper:
           namespace: orchestration-yaml-demo
           server-lists: localhost:2181
