@@ -85,8 +85,8 @@ sharding:
       sharding:
         default-database-strategy:
           inline:
-            sharding-column: user_id
-            algorithm-expression: ds_$->{user_id % 2}
+            sharding-column: app_id
+            algorithm-expression: ds_$->{app_id}
         binding-tables:
           - t_order,t_order_item
         tables:
@@ -112,7 +112,7 @@ sharding:
             slave-data-source-names: [ds-master-1-slave-0,ds-master-1-slave-1]
             load-balance-algorithm-type: ROUND_ROBIN
         props:
-          sql.show: true
+          sql.show: false
 #      masterslave:
 #        load-balance-algorithm-type: round_robin
 #        name: ds_ms

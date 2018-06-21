@@ -46,6 +46,7 @@ public class DemoService {
         System.out.println("1.Insert--------------");
         for (int i = 0; i < 10; i++) {
             Order order = new Order();
+            order.setAppId(i%2);
             order.setUserId(51);
             order.setStatus("INSERT_TEST");
             orderRepository.insert(order);
@@ -54,6 +55,7 @@ public class DemoService {
             
             OrderItem item = new OrderItem();
             item.setOrderId(orderId);
+            item.setAppId(i%2);
             item.setUserId(51);
             orderItemRepository.insert(item);
         }
