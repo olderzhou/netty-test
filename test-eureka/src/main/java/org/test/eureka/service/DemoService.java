@@ -59,14 +59,14 @@ public class DemoService {
             item.setUserId(51);
             orderItemRepository.insert(item);
         }
-        System.out.println(orderItemRepository.selectAll());
-        System.out.println("2.Delete--------------");
-        for (Long each : orderIds) {
-            orderRepository.delete(each);
-            orderItemRepository.delete(each);
-        }
-        System.out.println(orderItemRepository.selectAll());
-        orderItemRepository.dropTable();
-        orderRepository.dropTable();
+//        System.out.println(orderItemRepository.selectAll());
+//        System.out.println("2.Delete--------------");
+//        for (Long each : orderIds) {
+//            orderRepository.delete(each);
+//            orderItemRepository.delete(each);
+//        }
+//        System.out.println(orderItemRepository.selectAll());
+//        orderItemRepository.dropTable();
+//        orderRepository.dropTable();
     }
 }

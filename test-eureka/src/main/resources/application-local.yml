@@ -19,7 +19,7 @@ sharding:
       ds-master-0-slave-0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.33:3306/demo_ds_master_0_slave_0
+        jdbc-url: jdbc:mysql://10.2.1.33:3306/demo_ds_master_0
         username: yiconnect
         password: Lfk1DHw0JaJRWcEqZJeV
         minimum-idle: 1
@@ -32,7 +32,7 @@ sharding:
       ds-master-0-slave-1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.21:3306/demo_ds_master_0_slave_1
+        jdbc-url: jdbc:mysql://10.2.1.21:3306/demo_ds_master_0
         username: yiconnect
         password: Lfk1DHw0JaJRWcEqZJeV
         minimum-idle: 1
@@ -58,7 +58,7 @@ sharding:
       ds-master-1-slave-0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.33:3306/demo_ds_master_1_slave_0
+        jdbc-url: jdbc:mysql://10.2.1.33:3306/demo_ds_master_1
         username: yiconnect
         password: Lfk1DHw0JaJRWcEqZJeV
         minimum-idle: 1
@@ -71,7 +71,7 @@ sharding:
       ds-master-1-slave-1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.21:3306/demo_ds_master_1_slave_1
+        jdbc-url: jdbc:mysql://10.2.1.21:3306/demo_ds_master_1
         username: yiconnect
         password: Lfk1DHw0JaJRWcEqZJeV
         minimum-idle: 1
