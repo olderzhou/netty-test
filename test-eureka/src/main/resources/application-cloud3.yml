@@ -9,4 +9,4 @@ sharding:
           namespace: orchestration-yaml-demo
           server-lists: localhost:2181
 server:
-  port: 7214      
+  port: 7216

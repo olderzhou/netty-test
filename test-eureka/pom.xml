@@ -77,31 +77,34 @@
 			</activation>
 		</profile>
 		<profile>
+			<id>cloud2</id>
+			<properties>
+				<profileActive>cloud2</profileActive>
+			</properties>
+		</profile>
+		<profile>
+			<id>cloud3</id>
+			<properties>
+				<profileActive>cloud3</profileActive>
+			</properties>
+		</profile>
+		<profile>
 			<id>local</id>
 			<properties>
 				<profileActive>local</profileActive>
 			</properties>
-<!-- 			<activation> -->
-<!-- 				<activeByDefault>true</activeByDefault> -->
-<!-- 			</activation> -->
 		</profile>
 		<profile>
 			<id>local2</id>
 			<properties>
 				<profileActive>local2</profileActive>
 			</properties>
-<!-- 			<activation> -->
-<!-- 				<activeByDefault>true</activeByDefault> -->
-<!-- 			</activation> -->
 		</profile>
 		<profile>
 			<id>local3</id>
 			<properties>
 				<profileActive>local3</profileActive>
 			</properties>
-<!-- 			<activation> -->
-<!-- 				<activeByDefault>true</activeByDefault> -->
-<!-- 			</activation> -->
 		</profile>
 	</profiles>
 

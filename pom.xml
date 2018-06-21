@@ -25,6 +25,8 @@
 	<modules>
 		<module>test-eureka</module>
 	</modules>
+	<!--This sends everything else to /public -->
+	
 
 	<properties>
 		<java.version>1.7</java.version>
@@ -131,4 +133,30 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	
+	<distributionManagement>
+
+       <repository>
+
+           <id>releases</id>
+
+           <name>Nexus Release Repository</name>
+
+           <url>http://192.168.1.167/nexus/content/repositories/releases/</url>
+
+       </repository>
+
+       <snapshotRepository>
+
+           <id>snapshots</id>
+
+           <name>Nexus Snapshot Repository</name>
+
+           <url>http://192.168.1.167/nexus/content/repositories/snapshots/</url>
+
+       </snapshotRepository>
+
+   </distributionManagement>
+	
 </project>
