@@ -2,26 +2,28 @@
 	"tableRuleConfigs": [
 		{
 			"logicTable": "t_order",
-			"actualDataNodes": "ds_$-\u003e{0..1}.t_order_$-\u003e{0..1}",
+			"actualDataNodes": "ds_$-\u003e{0..2}.t_order_$-\u003e{0..1}",
 			"databaseShardingStrategyConfig": {
 				
 			},
 			"tableShardingStrategyConfig": {
 				
 			},
+			"keyGeneratorColumnName": "order_id",
 			"keyGenerator": {
 				
 			}
 		},
 		{
 			"logicTable": "t_order_item",
-			"actualDataNodes": "ds_$-\u003e{0..1}.t_order_item_$-\u003e{0..1}",
+			"actualDataNodes": "ds_$-\u003e{0..2}.t_order_item_$-\u003e{0..1}",
 			"databaseShardingStrategyConfig": {
 				
 			},
 			"tableShardingStrategyConfig": {
 				
 			},
+			"keyGeneratorColumnName": "order_item_id",
 			"keyGenerator": {
 				
 			}
@@ -32,8 +34,8 @@
 	],
 	"defaultDatabaseShardingStrategyConfig": {
 		"type": "INLINE",
-		"shardingColumn": "user_id",
-		"algorithmExpression": "ds_$-\u003e{user_id % 2}"
+		"shardingColumn": "app_id",
+		"algorithmExpression": "ds_$-\u003e{app_id}"
 	},
 	"defaultTableShardingStrategyConfig": {
 		
@@ -59,6 +61,17 @@
 			"slaveDataSourceNames": [
 				"ds-master-1-slave-0",
 				"ds-master-1-slave-1"
+			],
+			"loadBalanceAlgorithm": {
+				"masterSlaveLoadBalanceAlgorithm": "io.shardingsphere.core.api.algorithm.masterslave.RoundRobinMasterSlaveLoadBalanceAlgorithm"
+			}
+		},
+		{
+			"name": "ds_2",
+			"masterDataSourceName": "ds-master-2",
+			"slaveDataSourceNames": [
+				"ds-master-2-slave-0",
+				"ds-master-2-slave-1"
 			],
 			"loadBalanceAlgorithm": {
 				"masterSlaveLoadBalanceAlgorithm": "io.shardingsphere.core.api.algorithm.masterslave.RoundRobinMasterSlaveLoadBalanceAlgorithm"

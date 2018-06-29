@@ -44,7 +44,7 @@ public class DemoService {
         orderItemRepository.truncateTable();
         List<Long> orderIds = new ArrayList<>(10);
         System.out.println("1.Insert--------------");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             Order order = new Order();
             order.setAppId(i%2);
             order.setUserId(51);
