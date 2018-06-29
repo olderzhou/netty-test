@@ -26,7 +26,7 @@
 		<module>test-eureka</module>
 	</modules>
 	<!--This sends everything else to /public -->
-	
+
 
 	<properties>
 		<java.version>1.7</java.version>
@@ -86,11 +86,11 @@
 			<artifactId>logback-classic</artifactId>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>io.shardingsphere</groupId> -->
-<!-- 			<artifactId>sharding-jdbc-spring-boot-starter</artifactId> -->
-<!-- 			<version>${sharding-sphere.version}</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>io.shardingsphere</groupId> -->
+		<!-- <artifactId>sharding-jdbc-spring-boot-starter</artifactId> -->
+		<!-- <version>${sharding-sphere.version}</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>io.shardingsphere</groupId>
 			<artifactId>sharding-jdbc-orchestration-spring-boot-starter</artifactId>
@@ -101,62 +101,53 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- Docker maven plugin -->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
 				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-					<testSource>${java.version}</testSource>
-					<testTarget>${java.version}</testTarget>
+					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!-- Docker maven plugin -->
 		</plugins>
 	</build>
-	
-	
+
+
 	<distributionManagement>
 
-       <repository>
+		<repository>
 
-           <id>releases</id>
+			<id>releases</id>
 
-           <name>Nexus Release Repository</name>
+			<name>Nexus Release Repository</name>
 
-           <url>http://192.168.1.167/nexus/content/repositories/releases/</url>
+			<url>http://192.168.1.167/nexus/content/repositories/releases/</url>
 
-       </repository>
+		</repository>
 
-       <snapshotRepository>
+		<snapshotRepository>
 
-           <id>snapshots</id>
+			<id>snapshots</id>
 
-           <name>Nexus Snapshot Repository</name>
+			<name>Nexus Snapshot Repository</name>
 
-           <url>http://192.168.1.167/nexus/content/repositories/snapshots/</url>
+			<url>http://192.168.1.167/nexus/content/repositories/snapshots/</url>
 
-       </snapshotRepository>
+		</snapshotRepository>
 
-   </distributionManagement>
-	
+	</distributionManagement>
+
 </project>
