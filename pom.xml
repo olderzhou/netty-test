@@ -114,7 +114,7 @@
 					<dockerDirectory>src/main/docker</dockerDirectory>
 					<resources>
 						<resource>
-							<targetPath>/</targetPath>
+							<targetPath>/test-eureka/</targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}.jar</include>
 						</resource>
