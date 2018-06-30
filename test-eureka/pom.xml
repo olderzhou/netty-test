@@ -13,18 +13,6 @@
 		<artifactId>netty-test</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
-	<!-- Aliyun repository -->
-    <repositories>
-        <repository>
-        <id>central</id>
-            <name>aliyun</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
