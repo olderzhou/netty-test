@@ -1,6 +1,5 @@
 package org.test.eureka;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -16,6 +15,7 @@ import org.test.eureka.service.ZooKeeperService;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.common.collect.Maps;
 
 /**
  * 此类描述的是：
@@ -31,7 +31,7 @@ public class HelloClientApplication {
 
 	@GetMapping("/info")
 	public Map<String, Object> hello() {
-		Map<String, Object> data = new HashMap<>();
+		Map<String, Object> data = Maps.newHashMapWithExpectedSize(256);
 		data.put("info", "for test");
 		data.put("code", 0);
 		return data;
@@ -46,8 +46,8 @@ public class HelloClientApplication {
 	@GetMapping("/test")
 	public Map<String, Object> test() {
 		demoService.demo();
-
-		Map<String, Object> data = new HashMap<>();
+//		Map<String, Object> data = new HashMap<>(256);
+		Map<String, Object> data = Maps.newHashMapWithExpectedSize(256);
 		data.put("info", "demoService.demo()");
 		data.put("code", 1);
 		return data;
@@ -56,7 +56,7 @@ public class HelloClientApplication {
 	@GetMapping("/testZooKeeperService")
 	public Map<String, Object> testZooKeeperService() {
 
-		Map<String, Object> data = new HashMap<>();
+		Map<String, Object> data = Maps.newHashMapWithExpectedSize(256);
 		data.put("info", "demoService.demo()");
 		data.put("code", 1);
 		LOGGER.info("loadDataSourceMap is {}",keeperService.loadDataSourceMap());
