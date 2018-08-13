@@ -9,7 +9,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
         username: root
         password: 123456
-        minimum-idle: 10
+        minimum-idle: 2
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -22,7 +22,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
         username: root
         password: 123456
-        minimum-idle: 10
+        minimum-idle: 2
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -35,7 +35,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
         username: root
         password: 123456
-        minimum-idle: 10
+        minimum-idle: 2
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -48,7 +48,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
         username: root
         password: 123456
-        minimum-idle: 10
+        minimum-idle: 2
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -61,7 +61,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
         username: root
         password: 123456
-        minimum-idle: 10
+        minimum-idle: 2
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -74,7 +74,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
         username: root
         password: 123456
-        minimum-idle: 10
+        minimum-idle: 2
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -122,9 +122,9 @@ sharding:
       orchestration:
         name: demo_yaml_ds_sharding_ms
         type: sharding
-        overwrite: true
+        overwrite: false
         zookeeper:
           namespace: orchestration-yaml-demo
-          server-lists: localhost:2181
+          server-lists: localhost:2183
 server:
   port: 7213     
