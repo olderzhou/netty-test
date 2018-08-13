@@ -6,9 +6,9 @@ sharding:
       ds-master-0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.34:3306/demo_ds_master_0
-        username: yiconnect
-        password: Lfk1DHw0JaJRWcEqZJeV
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
+        username: root
+        password: 123456
         minimum-idle: 1
         maximum-pool-size: 30
         auto-commit: true
@@ -19,9 +19,9 @@ sharding:
       ds-master-0-slave-0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.33:3306/demo_ds_master_0
-        username: yiconnect
-        password: Lfk1DHw0JaJRWcEqZJeV
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
+        username: root
+        password: 123456
         minimum-idle: 1
         maximum-pool-size: 30
         auto-commit: true
@@ -32,9 +32,9 @@ sharding:
       ds-master-0-slave-1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.21:3306/demo_ds_master_0
-        username: yiconnect
-        password: Lfk1DHw0JaJRWcEqZJeV
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
+        username: root
+        password: 123456
         minimum-idle: 1
         maximum-pool-size: 30
         auto-commit: true
@@ -45,9 +45,9 @@ sharding:
       ds-master-1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.34:3306/demo_ds_master_1
-        username: yiconnect
-        password: Lfk1DHw0JaJRWcEqZJeV
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
+        username: root
+        password: 123456
         minimum-idle: 1
         maximum-pool-size: 30
         auto-commit: true
@@ -58,9 +58,9 @@ sharding:
       ds-master-1-slave-0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.33:3306/demo_ds_master_1
-        username: yiconnect
-        password: Lfk1DHw0JaJRWcEqZJeV
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
+        username: root
+        password: 123456
         minimum-idle: 1
         maximum-pool-size: 30
         auto-commit: true
@@ -71,9 +71,9 @@ sharding:
       ds-master-1-slave-1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://10.2.1.21:3306/demo_ds_master_1
-        username: yiconnect
-        password: Lfk1DHw0JaJRWcEqZJeV
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
+        username: root
+        password: 123456
         minimum-idle: 1
         maximum-pool-size: 30
         auto-commit: true

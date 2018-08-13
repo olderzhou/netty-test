@@ -76,9 +76,6 @@
 			<properties>
 				<profileActive>cloud</profileActive>
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 		</profile>
 		<profile>
 			<id>cloud2</id>
@@ -97,6 +94,9 @@
 			<properties>
 				<profileActive>local</profileActive>
 			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 		</profile>
 		<profile>
 			<id>local2</id>
