@@ -9,7 +9,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
         username: root
         password: 123456
-        minimum-idle: 1
+        minimum-idle: 10
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -22,7 +22,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
         username: root
         password: 123456
-        minimum-idle: 1
+        minimum-idle: 10
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -35,7 +35,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_0
         username: root
         password: 123456
-        minimum-idle: 1
+        minimum-idle: 10
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -48,7 +48,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
         username: root
         password: 123456
-        minimum-idle: 1
+        minimum-idle: 10
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -61,7 +61,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
         username: root
         password: 123456
-        minimum-idle: 1
+        minimum-idle: 10
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -74,7 +74,7 @@ sharding:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/demo_ds_master_1
         username: root
         password: 123456
-        minimum-idle: 1
+        minimum-idle: 10
         maximum-pool-size: 30
         auto-commit: true
         idle-timeout: 60000
@@ -115,7 +115,7 @@ sharding:
             load-balance-algorithm-type: ROUND_ROBIN
         props:
           sql.show: false    
-          executor.size: 1       
+#          executor.size: 1       
       orchestration:
         name: demo_yaml_ds_sharding_ms
         type: sharding
