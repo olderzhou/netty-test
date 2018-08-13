@@ -114,7 +114,8 @@ sharding:
             slave-data-source-names: [ds-master-1-slave-0,ds-master-1-slave-1]
             load-balance-algorithm-type: ROUND_ROBIN
         props:
-          sql.show: false           
+          sql.show: false    
+          executor.size: 1       
       orchestration:
         name: demo_yaml_ds_sharding_ms
         type: sharding

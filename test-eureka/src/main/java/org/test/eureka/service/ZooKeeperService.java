@@ -21,7 +21,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import io.shardingsphere.core.api.config.ShardingRuleConfiguration;
 import io.shardingsphere.jdbc.orchestration.internal.config.ConfigurationNode;
 import io.shardingsphere.jdbc.orchestration.internal.config.ConfigurationService;
-import io.shardingsphere.jdbc.orchestration.internal.json.DataSourceJsonConverter;
+//import io.shardingsphere.jdbc.orchestration.internal.json.DataSourceJsonConverter;
 import io.shardingsphere.jdbc.orchestration.reg.api.RegistryCenter;
 
 /**
@@ -53,7 +53,7 @@ public class ZooKeeperService {
 	}  
 	
 	public Map<String, DataSource> loadDataSourceMap() {
-		Map<String, DataSource> dataSources = DataSourceJsonConverter.fromJson(regCenter.getDirectly(configNode.getFullPath(ConfigurationNode.DATA_SOURCE_NODE_PATH)));
+//		Map<String, DataSource> dataSources = DataSourceJsonConverter.fromJson(regCenter.getDirectly(configNode.getFullPath(ConfigurationNode.DATA_SOURCE_NODE_PATH)));
 		HikariDataSource dataMaster = new HikariDataSource();
 		dataMaster.setDriverClassName("com.mysql.jdbc.Driver");
 		dataMaster.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/demo_ds_master_2");
@@ -90,12 +90,13 @@ public class ZooKeeperService {
 		dataSlave2.setMaxLifetime(18000000);
 		dataSlave2.setConnectionTestQuery("SELECT 1");
 		dataSlave2.setConnectionTimeout(60000);
-		dataSources.put("ds_master_2", dataMaster);
-		dataSources.put("ds-master-2-slave-0", dataSlave1);
-		dataSources.put("ds-master-2-slave-2", dataSlave2);
-		
-		regCenter.persist(configNode.getFullPath(ConfigurationNode.DATA_SOURCE_NODE_PATH), DataSourceJsonConverter.toJson(dataSources));
-		return DataSourceJsonConverter.fromJson(regCenter.getDirectly(configNode.getFullPath(ConfigurationNode.DATA_SOURCE_NODE_PATH)));
+//		dataSources.put("ds_master_2", dataMaster);
+//		dataSources.put("ds-master-2-slave-0", dataSlave1);
+//		dataSources.put("ds-master-2-slave-2", dataSlave2);
+//		
+//		regCenter.persist(configNode.getFullPath(ConfigurationNode.DATA_SOURCE_NODE_PATH), DataSourceJsonConverter.toJson(dataSources));
+//		return DataSourceJsonConverter.fromJson(regCenter.getDirectly(configNode.getFullPath(ConfigurationNode.DATA_SOURCE_NODE_PATH)));
+		return null;
 	}
 	
 	public ShardingRuleConfiguration loadShardingRuleConfig() {
