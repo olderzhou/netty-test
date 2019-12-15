@@ -20,7 +20,7 @@ import com.google.common.collect.Maps;
 /**
  * 此类描述的是：
  * 
- * @author: klauszhou@wezhuiyi.com
+ * @author: niklausjulie@gmail.com
  * @version: 2018年6月14日 上午10:16:59
  */
 @SpringBootApplication
