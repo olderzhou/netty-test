@@ -3,7 +3,7 @@
  *   
  * 版本信息：   
  * 日期：2018年6月22日 下午7:26:32  
- * Copyright @Zhuiyi Inc 2018    
+ * Copyright @klaus Inc 2018    
  * 版权所有   
  *   
  */
@@ -28,7 +28,7 @@ import io.shardingsphere.jdbc.orchestration.spring.boot.orchestration.SpringBoot
 /**
  * 此类描述的是：
  * 
- * @author: klauszhou@wezhuiyi.com
+ * @author: niklauszhou@gmail.com
  * @version: 2018年6月22日 下午7:26:32
  */
 @Component
