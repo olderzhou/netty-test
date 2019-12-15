@@ -3,7 +3,7 @@
  *   
  * 版本信息：   
  * 日期：2018年6月22日 下午5:15:16  
- * Copyright @Zhuiyi Inc 2018    
+ * Copyright @klaus Inc 2018    
  * 版权所有   
  *   
  */
