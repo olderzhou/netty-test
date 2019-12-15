@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 
 	<parent>
-		<groupId>com.zhuiyi</groupId>
+		<groupId>com.klaus</groupId>
 		<artifactId>netty-test</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
