@@ -27,7 +27,7 @@ import io.shardingsphere.jdbc.orchestration.reg.api.RegistryCenter;
 /**
  * 此类描述的是：
  * 
- * @author: klauszhou@wezhuiyi.com
+ * @author: niklauszhou@gmail.com
  * @version: 2018年6月22日 下午5:15:16
  */
 @Service
